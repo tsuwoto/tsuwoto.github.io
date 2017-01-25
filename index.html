@@ -116,14 +116,18 @@
            var ibb = {lat: 33.779010, lng: -84.397259};
            var coc = {lat: 33.777523, lng: -84.397389}
            var smith = {lat: 33.7736495, lng: -84.3951647};
+           var mrdc = {lat: 33.776886, lng: -84.400604}
+           var groseclose = {lat: 33.77574963249416, lng:-84.4018703699112}
+           var howey = {lat: 33.777464, lng: -84.398508}
+           var mosey = {lat: 33.77983510364928, lng: -84.39664274454117}
+           var vanleer = {lat: 33.77600045148052, lng: -84.3971335887909}
            var cherrem = {lat: 33.778240, lng: -84.397120};
-           var mose = {lat: 33.779838, lng: -84.396691};
-           var microwave_locations = [studentcenter, culc, love, klaus, isye, bn, marc, ibb, coc, smith, cherrem, mose];
+           var microwave_locations = [studentcenter, culc, love, klaus, isye, bn, marc, ibb, coc, smith,mrdc, groseclose, howey, mosey, vanleer, cherrem];
            var map = new google.maps.Map(document.getElementById('map'), {
              zoom: 15,
              center: gtech
            });
-           var scinfowin = '<div id="content">'+
+            var scinfowin = '<div id="content">'+
               '<div id="siteNotice">'+
               '</div>'+
               '<id="firstHeading" class="firstHeading"><font size="+2"><b>Student Center (5)</font></b>'+
@@ -169,15 +173,15 @@
               '</div>'+
               '<id="firstHeading" class="firstHeading"><font size="+2"><b>Barnes and Noble</font></b>'+
               '<div id="bodyContent">'+
-              '<br/><font size="-1">Second floor</font>'+
+              '<br/><b><font size="-1">Second Floor: </b>Confirmation Needed</font>'+
               '</div>'+
               '</div>';
             var marcinfowin = '<div id="content">'+
               '<div id="siteNotice">'+
               '</div>'+
-              '<id="firstHeading" class="firstHeading"><font size="+2"><b>Georgia Tech Manufacturing Institute</font></b>'+
+              '<id="firstHeading" class="firstHeading"><font size="+2"><b>Georgia Tech Manufacturing Institute (MARC)</font></b>'+
               '<div id="bodyContent">'+
-              '<br/><font size="-1">Confirmation Needed</font>'+
+              '<br/><b><font size="-1">Fourth Floor: </b>On the back of the large wooden bookshelf in front of the elevator</font>'+
               '</div>'+
               '</div>';
             var ibbinfowin = '<div id="content">'+
@@ -191,9 +195,10 @@
             var cocinfowin = '<div id="content">'+
               '<div id="siteNotice">'+
               '</div>'+
-              '<id="firstHeading" class="firstHeading"><font size="+2"><b>College of Computing</font></b>'+
+              '<id="firstHeading" class="firstHeading"><font size="+2"><b>College of Computing (2)</font></b>'+
               '<div id="bodyContent">'+
-              '<br/><b><font size = "-1">Room 107A: </b> This room is for 1301/2316 helpdesk. If office hours are not in session, room may be locked.'
+              '<br/><b><font size = "-1">Room 357:  </b> Kitchen includes Keurig and electric kettle as bonus features!'+
+              '<br/><b>Room 107A: </b> This room is for 1301/2316 helpdesk. If office hours are not in session, room may be locked.'+
               '</div>'+
               '</div>';
             var smithinfowin = '<div id="content">'+
@@ -204,23 +209,57 @@
               '<br/><b><font size = "-1">Basement: </b>Lounge/kitchen near entrance from Freshman Hill</font>'+
               '</div>'+
               '</div>';
+            var mrdcinfowin = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<id="firstHeading" class="firstHeading"><font size="+2"><b>Manufacturing Related Disciplines Complex (MRDC)</font></b>'+
+              '<div id="bodyContent">'+
+              '<br/><b><font size = "-1">Second Floor: </b>Right outside the Invention Studio next to the trophy case</font>'+
+              '</div>'+
+              '</div>';
+            var grosecloseinfowin = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<id="firstHeading" class="firstHeading"><font size="+2"><b>Groseclose</font></b>'+
+              '<div id="bodyContent">'+
+              '<br/><b><font size = "-1">2nd Floor Faculty Lounge: </b>You will have to ask the secretary in the main office accross the hall to be let in</font>'+
+              '</div>'+
+              '</div>';
+            var howeyinfowin = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<id="firstHeading" class="firstHeading"><font size="+2"><b>Howey (2)</font></b>'+
+              '<div id="bodyContent">'+
+              '<br/><b><font size = "-1">Room S203:  </b>Lounge for Society of Physics students'+
+              '<br/><b>Room S-105: </b>Locked, but can ask secretary in Administrative Office next door to be let in'+
+              '</div>'+
+              '</div>';
+            var moseyinfowin = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<id="firstHeading" class="firstHeading"><font size="+2"><b>Molecular Science and Engineering Building</font></b>'+
+              '<div id="bodyContent">'+
+              '<br/><b><font size = "-1">Room 2201F:  </b>Doubles as a Mail Room. Includes toaster as bonus feature!'+
+              '</div>'+
+              '</div>';
+            var vanleerinfowin = '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<id="firstHeading" class="firstHeading"><font size="+2"><b>Van Leer</font></b>'+
+              '<div id="bodyContent">'+
+              '<br/><b><font size = "-1">Fifth Floor: </b>Intended for emag research</font>'+
+              '</div>'+
+              '</div>';
             var cherreminfowin = '<div id="content">'+
               '<div id="siteNotice">'+
               '</div>'+
               '<id="firstHeading" class="firstHeading"><font size="+2"><b>Cherry Emerson Building</font></b>'+
               '<div id="bodyContent">'+
-              '<br/><font size="-1">Confirmation Needed</font>'+
+              '<br/><b><font size="-1">Room 236: </b>Includes toaster and microwave oven as bonus features! The coffee is for the Dean, so do not touch it unless you want to be expelled.</font>'+
               '</div>'+
               '</div>';
-            var moseinfowin = '<div id="content">'+
-              '<div id="siteNotice">'+
-              '</div>'+
-              '<id="firstHeading" class="firstHeading"><font size="+2"><b>Molecular Science Building</font></b>'+
-              '<div id="bodyContent">'+
-              '<br/><font size="-1">Third Floor East</font>'+
-              '</div>'+
-              '</div>';
-            var loc_info = [scinfowin, culcinfowin, loveinfowin, klausinfowin, isyeinfowin, bninfowin, marcinfowin, ibbinfowin, cocinfowin,smithinfowin, cherreminfowin, moseinfowin];
+            var loc_info = [scinfowin, culcinfowin, loveinfowin, klausinfowin, isyeinfowin, bninfowin, marcinfowin, ibbinfowin, cocinfowin,smithinfowin, mrdcinfowin, grosecloseinfowin, howeyinfowin,moseyinfowin, vanleerinfowin, cherreminfowin];
+
             for (var i = 0; i < microwave_locations.length; i++) {
               var marker = new google.maps.Marker({
                 position: microwave_locations[i],
@@ -265,7 +304,7 @@
                     <p>Look no more! With Find MYcrowave, you can easily find all microwave locations on campus. Just click on the marker and it will tell you the exact details of where to find that microwave. Bon appetit!</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <li class="btn btn-lg btn-outline">
+                    <li class="btn btn-lg btn-outline page-scroll">
                         <a href="#map">To Map</a>
                     </li>
                    <!--  <a href="#" class="btn btn-lg btn-outline">
