@@ -107,7 +107,7 @@
     <script>
           function initMap() {
            var gtech = {lat: 33.7756, lng: -84.3963};
-           var studentcenter = {lat: 33.7739, lng: -84.3988};
+           var exhibition_hall = {lat: 33.7746, lng: -84.4017};
            var culc = {lat: 33.774953, lng: -84.396295};
            var love = {lat: 33.776727, lng: -84.401842};
            var klaus = {lat: 33.777191, lng: -84.396202};
@@ -123,20 +123,30 @@
            var mosey = {lat: 33.77983510364928, lng: -84.39664274454117}
            var vanleer = {lat: 33.77600045148052, lng: -84.3971335887909}
            var cherrem = {lat: 33.778240, lng: -84.397120};
-           var microwave_locations = [studentcenter, culc, love, klaus, isye, bn, marc, ibb, coc, smith,mrdc, groseclose, howey, mosey, vanleer, cherrem];
+           var microwave_locations = [exhibition_hall, culc, love, klaus, isye, bn, marc, ibb, coc, smith,mrdc, groseclose, howey, mosey, vanleer, cherrem];
            var map = new google.maps.Map(document.getElementById('map'), {
              zoom: 15,
              center: gtech
            });
-            var scinfowin = '<div id="content">'+
+//             var scinfowin = '<div id="content">'+
+//               '<div id="siteNotice">'+
+//               '</div>'+
+//               '<id="firstHeading" class="firstHeading"><font size="+2"><b>Student Center (5)</font></b>'+
+//               '<div id="bodyContent">'+
+//               '<br/><b><font size = "-1">Second Floor (3): </b> Two microwaves in the food court near the Dunkin&#39 Donuts, one in Under the Couch (you will have to ask the worker on duty to use the microwave)' +
+//               '<br/><b>First Floor (2): </b> One next to the Chick-fil-a booths; one in the back of Burdell&#39s</font>'+
+//               '</div>'+
+//               '</div>';
+            
+            var exhibition_hall_infowin = '<div id="content">'+
               '<div id="siteNotice">'+
               '</div>'+
-              '<id="firstHeading" class="firstHeading"><font size="+2"><b>Student Center (5)</font></b>'+
+              '<id="firstHeading" class="firstHeading"><font size="+2"><b>Exhibition Hall</font></b>'+
               '<div id="bodyContent">'+
-              '<br/><b><font size = "-1">Second Floor (3): </b> Two microwaves in the food court near the Dunkin&#39 Donuts, one in Under the Couch (you will have to ask the worker on duty to use the microwave)' +
-              '<br/><b>First Floor (2): </b> One next to the Chick-fil-a booths; one in the back of Burdell&#39s</font>'+
+              '<br/><b><font size = "-1">First Floor: </b>By the vending machines on the right from the main entrance.</font>'+
               '</div>'+
               '</div>';
+              
             var culcinfowin = '<div id="content">'+
               '<div id="siteNotice">'+
               '</div>'+
@@ -259,7 +269,7 @@
               '<br/><b><font size="-1">Room 236: </b>Includes toaster and microwave oven as bonus features! The coffee is for the Dean, so do not touch it unless you want to be expelled.</font>'+
               '</div>'+
               '</div>';
-            var loc_info = [scinfowin, culcinfowin, loveinfowin, klausinfowin, isyeinfowin, bninfowin, marcinfowin, ibbinfowin, cocinfowin,smithinfowin, mrdcinfowin, grosecloseinfowin, howeyinfowin,moseyinfowin, vanleerinfowin, cherreminfowin];
+            var loc_info = [exhibition_hall_infowin, culcinfowin, loveinfowin, klausinfowin, isyeinfowin, bninfowin, marcinfowin, ibbinfowin, cocinfowin,smithinfowin, mrdcinfowin, grosecloseinfowin, howeyinfowin,moseyinfowin, vanleerinfowin, cherreminfowin];
 
             for (var i = 0; i < microwave_locations.length; i++) {
               var marker = new google.maps.Marker({
